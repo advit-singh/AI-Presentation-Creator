@@ -1,0 +1,161 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Base Styles --- */
+
+body {
+  @apply bg-gray-100 text-gray-900 font-sans;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Typography --- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+  margin-bottom: 0.5rem;
+}
+
+h1 { @apply text-3xl; }
+h2 { @apply text-2xl; }
+h3 { @apply text-xl; }
+h4 { @apply text-lg; }
+h5 { @apply text-base; }
+h6 { @apply text-sm; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  @apply text-blue-500 hover:underline;
+}
+
+ul,
+ol {
+  @apply list-disc list-inside;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Forms --- */
+
+input,
+textarea,
+select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  @apply h-24;
+}
+
+label {
+  @apply block text-gray-700 font-medium mb-1;
+}
+
+button {
+  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600;
+  cursor: pointer;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* --- Tables --- */
+
+table {
+  @apply w-full border-collapse border border-gray-300;
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  @apply px-4 py-2 border border-gray-300 text-left;
+}
+
+th {
+  @apply bg-gray-200 font-medium;
+}
+
+/* --- Cards --- */
+
+.card {
+  @apply bg-white shadow-md rounded-lg p-4;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+/* --- Navigation --- */
+
+nav {
+  @apply bg-gray-800 p-4;
+}
+
+nav ul {
+  @apply flex space-x-4;
+}
+
+nav a {
+  @apply text-white hover:text-gray-200;
+}
+
+/* --- Editor --- */
+
+.editor {
+  @apply p-4 border border-gray-300 rounded;
+  min-height: 300px;
+}
+
+/* --- Slides --- */
+
+.slide {
+  @apply bg-white p-4 border border-gray-300 rounded mb-4;
+  min-height: 150px;
+}
+
+/* --- Accessibility --- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Responsive Design --- */
+
+@media (min-width: 768px) {
+  /* Medium screens and up */
+  .container {
+    @apply max-w-3xl mx-auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large screens and up */
+  .container {
+    @apply max-w-5xl mx-auto;
+  }
+}
